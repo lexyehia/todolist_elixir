@@ -51,8 +51,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :idemserver, Idemserver.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "idemserver_dev",
+  username: "cyehia",
+  password: "",
+  database: "reactivedev",
   hostname: "localhost",
   pool_size: 10
