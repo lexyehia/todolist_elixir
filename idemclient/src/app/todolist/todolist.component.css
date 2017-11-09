@@ -1,3 +1,5 @@
-app-todolist {
-  font-weight: bold;
+:host {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
 }

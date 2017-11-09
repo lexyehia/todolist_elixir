@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  border: 1px black solid;
+}
+
+span {
+  font-size: 125%;
+  font-family: Arial;
+  margin-left: 25px;
+}

@@ -1,18 +1,22 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-todolist',
   templateUrl: './todolist.component.html',
-  styleUrls: ['./todolist.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent implements OnInit {
 
   list = 'Windstorm';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.http.get('/api/todos').subscribe(data => {
+
+    })
   }
 
 }

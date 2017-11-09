@@ -20,7 +20,9 @@ defmodule IdemserverWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", IdemserverWeb do
-  #   pipe_through :api
-  # end
+  scope "/api/v1", IdemserverWeb, as: :api_v1 do
+    pipe_through :api
+
+    resources "/todos", TodoController
+  end
 end
