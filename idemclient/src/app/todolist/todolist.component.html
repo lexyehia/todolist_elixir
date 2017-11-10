@@ -1,1 +1,4 @@
-<app-todo></app-todo>
+<article *ngFor="let todo of todolist">
+  <button class="btn btn-sm btn-success">Done</button>
+  <span>{{todo.description}}</span>
+</article>

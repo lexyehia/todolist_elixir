@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
 import { TodolistComponent } from './todolist/todolist.component';
-import { TodoComponent } from './todo/todo.component';
 import { NewtodoComponent } from './newtodo/newtodo.component';
 
 
@@ -13,11 +13,11 @@ import { NewtodoComponent } from './newtodo/newtodo.component';
   declarations: [
     AppComponent,
     TodolistComponent,
-    TodoComponent,
     NewtodoComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

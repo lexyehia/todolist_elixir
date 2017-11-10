@@ -9,14 +9,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TodolistComponent implements OnInit {
 
-  list = 'Windstorm';
+  todolist: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('/api/todos').subscribe(data => {
-      console.log(data);
-    })
+    this.http.get('/api/todos').subscribe((resp: any) => {
+      console.log(resp);
+      this.todolist = resp.data;
+    });
   }
-
 }
