@@ -22,7 +22,7 @@ export class NewtodoComponent implements OnInit {
     return this.http.post('/api/todos', {
       todo: { description: this.todoDescription }
     }).subscribe(resp => {
-      this.onSubmit.emit(this.todoDescription);
+      this.onSubmit.emit(resp['data']);
     });
   }
 }

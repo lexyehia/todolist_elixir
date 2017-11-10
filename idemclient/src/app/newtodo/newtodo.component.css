@@ -1,0 +1,9 @@
+form {
+  display: flex;
+  justify-content: center;
+}
+
+:host {
+  display: block;
+  margin-bottom: 20px;
+}

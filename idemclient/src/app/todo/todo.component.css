@@ -1,10 +1,15 @@
 article {
   display: block;
-  border: 1px black solid;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #F5F5DC;
+  border-radius: 5px;
 }
 
-article > span {
-  font-size: 125%;
+article span {
+  font-size: 115%;
   font-family: Arial;
   margin-left: 25px;
 }
+
+

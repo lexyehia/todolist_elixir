@@ -22,6 +22,19 @@ defmodule Idemserver.Todolist do
   end
 
   @doc """
+  Returns a sorted list of todos by desc insertion date.
+
+  ## Examples
+
+      iex> list_sorted_todos()
+      [%Todo{}, ...]
+
+  """
+  def list_sorted_todos do
+    Todo |> order_by(desc: :inserted_at) |> Repo.all
+  end
+
+  @doc """
   Gets a single todo.
 
   Raises `Ecto.NoResultsError` if the Todo does not exist.

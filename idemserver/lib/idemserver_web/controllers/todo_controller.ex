@@ -7,7 +7,7 @@ defmodule IdemserverWeb.TodoController do
   action_fallback IdemserverWeb.FallbackController
 
   def index(conn, _params) do
-    todos = Todolist.list_todos()
+    todos = Todolist.list_sorted_todos()
     render(conn, "index.json", todos: todos)
   end
 

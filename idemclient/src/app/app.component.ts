@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  processSubmit(event: string) {
-    this.todolist.unshift({description: event});
+  processSubmit(event: Object) {
+    this.todolist.unshift(event);
   }
 
   ngOnInit(): void {
