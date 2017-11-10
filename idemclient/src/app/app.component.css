@@ -1,1 +1,4 @@
-
+:host > h1 {
+  width: 170px;
+  margin: 10px auto;
+}
