@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   processSubmit(event: string) {
-    this.todolist.push({description: event});
+    this.todolist.unshift({description: event});
   }
 
   ngOnInit(): void {
