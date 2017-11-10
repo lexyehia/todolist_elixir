@@ -1,4 +1,4 @@
-<form [formGroup]="newTodoForm" (ngSubmit)="addTodo($event)">
-  <input formControlName="description" type="text" />
+<form #todoForm="ngForm" (ngSubmit)="addTodo()">
+  <input name="description" type="text" [(ngModel)]="todoDescription" />
   <button type="submit">Add</button>
 </form>
