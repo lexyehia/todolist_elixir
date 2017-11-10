@@ -1,6 +1,5 @@
-import { ResponseBodyHandler } from '_debugger';
-import { format } from 'path';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { TodolistComponent } from '../todolist/todolist.component';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -11,15 +10,17 @@ import { HttpClient } from '@angular/common/http';
 export class NewtodoComponent implements OnInit {
 
   todoDescription: string;
+  @Output() onSubmit = new EventEmitter<string>();
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   addTodo() {
     return this.http.post('/api/todos', {
-      description: this.todoDescription
-    }).subscribe((resp: any) => console.log(resp));
+      todo: { description: this.todoDescription }
+    }).subscribe(resp => {
+      this.onSubmit.emit(this.todoDescription);
+    });
   }
 }

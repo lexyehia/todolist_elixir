@@ -1,3 +1,3 @@
-<h1>{{title}} Hello there!</h1>
-<app-newtodo></app-newtodo>
-<app-todolist></app-todolist>
+<h1>Bla!</h1>
+<app-newtodo (onSubmit)="processSubmit($event)"></app-newtodo>
+<app-todolist [todolist]="todolist"></app-todolist>
