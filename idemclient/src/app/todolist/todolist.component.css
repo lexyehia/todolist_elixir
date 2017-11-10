@@ -3,14 +3,3 @@
   margin: 0 auto;
   width: 300px;
 }
-
-article {
-  display: block;
-  border: 1px black solid;
-}
-
-article > span {
-  font-size: 125%;
-  font-family: Arial;
-  margin-left: 25px;
-}

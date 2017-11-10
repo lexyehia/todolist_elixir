@@ -10,7 +10,9 @@ import { HttpClient } from '@angular/common/http';
 export class NewtodoComponent implements OnInit {
 
   todoDescription: string;
-  @Output() onSubmit = new EventEmitter<string>();
+
+  @Output()
+  onSubmit = new EventEmitter<string>();
 
   constructor(private http: HttpClient) { }
 

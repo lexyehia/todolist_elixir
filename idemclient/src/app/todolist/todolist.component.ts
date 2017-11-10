@@ -9,5 +9,4 @@ export class TodolistComponent {
 
   @Input()
   todolist: Array<any>;
-
 }

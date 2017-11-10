@@ -30,7 +30,7 @@ defmodule IdemserverWeb.TodoController do
 
     with {:ok, %Todo{} = todo} <- Todolist.update_todo(todo, todo_params) do
       render(conn, "show.json", todo: todo)
-    end
+    end 
   end
 
   def delete(conn, %{"id" => id}) do
